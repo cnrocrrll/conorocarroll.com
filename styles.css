@@ -64,7 +64,7 @@ header {
 
 /* Hero */
 main {
-  padding-top: 6rem;
+  padding-top: 4rem;
   min-height: 50vh;
   display: flex;
   justify-content: center;
@@ -72,11 +72,6 @@ main {
   text-align: center;
 }
 
-@media (max-width: 600px) {
-  main {
-    padding-top: 8rem; /* increase on small screens */
-  }
-}
 .intro {
   padding: 0 1rem;
 }
