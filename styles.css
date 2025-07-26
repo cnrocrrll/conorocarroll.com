@@ -298,7 +298,7 @@ footer {
     cursor: pointer;
 /*       max-width: 100%; */
   height: auto;
-      max-width: 250px; /* Optional: control max width of each video if needed */
+      max-width: 400px; /* Optional: control max width of each video if needed */
     margin: 0 auto;
   }
   
