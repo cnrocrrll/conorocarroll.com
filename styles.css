@@ -1,47 +1,78 @@
 /* Reset & base */
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-    font-family: sans-serif;
-    color: #ffffff;
-    background: #000000;
-    background: linear-gradient(45deg, #020441, #000000, #020441, #000000);
-    background-size: 400% 400%;
-    animation: bgMove 10s ease infinite;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-a { text-decoration: none; color: inherit; }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: sans-serif;
+  color: #ffffff;
+  background: linear-gradient(45deg, #020441, #000000, #020441, #000000);
+  background-size: 400% 400%;
+  animation: bgMove 10s ease infinite;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 @keyframes bgMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
   }
-
-.dropdown-toggle {
-    transition: letter-spacing 0.3s ease, color 0.3s ease;
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-.dropdown-toggle:hover {
-    letter-spacing: 0.05em;
-    color: #ffffff;
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
 }
 
-/* Header & nav */
-
-#main-nav.hidden { display: none; }
-#main-nav ul {
-  list-style:none;
-  background:#000000;
-  padding:1rem;
+.site-name {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
 }
-#main-nav li + li { margin-top:0.5rem; }
 
-/* Hero section */
+.social-icons a {
+  color: #ffffff;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+.social-icons a:hover {
+  color: #a0a0a0;
+}
+
+/* Hero */
 main {
-  padding-top: 4rem; /* offset for fixed header */
+  padding-top: 5rem;
   min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.intro {
+  padding: 0 1rem;
 }
 .intro h1 {
   font-size: clamp(2rem, 8vw, 4rem);
@@ -53,14 +84,191 @@ main {
   font-weight: 400;
 }
 .cta-buttons a {
-  display:inline-block;
-  margin:0 0.5rem 0.5rem;
-  padding:0.75rem 1.25rem;
-  border:1px solid #111;
-  border-radius:4px;
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #111;
+  border-radius: 4px;
 }
 .cta-buttons a:hover {
-  background:#111; color:#fff;
+  background: #111;
+  color: #fff;
+}
+
+.profile-image {
+  width: 40vw;
+  max-width: 350px;
+  min-width: 175px;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Dropdown sections */
+.cta-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+  border-top: 1px solid #ffffff;
+}
+.dropdown-toggle.active .arrow {
+  transform: rotate(180deg);
+}
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+  width: 100%;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #ffffff;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+}
+.dropdown-content.open {
+  max-height: 900px;
+  margin-top: 0.5rem;
+}
+.bottom-divider {
+  height: 2px;
+  background-color: #ffffff;
+  margin-top: 1rem;
+}
+.link-text {
+  flex: 1;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 1rem;
+}
+.timeline-dot {
+  position: absolute;
+  left: -0.75rem;
+  top: 0.3rem;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  z-index: 2;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -0.5rem;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  border-left: 2px dotted white;
+  z-index: 1;
+}
+.timeline-item:last-child::before {
+  display: none;
+}
+.timeline-date {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+}
+.timeline-content {
+  font-size: 0.9rem;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+/* Video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.video-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+  cursor: pointer;
+}
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease;
+  pointer-events: none;
+  border-radius: 8px;
+}
+.video-wrapper.playing .video-overlay {
+  background: transparent;
+}
+.video-caption {
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  user-select: none;
 }
 
 /* Footer */
@@ -69,347 +277,43 @@ footer {
   text-align: center;
 }
 
-.site-name {
-    font-size: 1.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.01em;
-    color: #ffffff;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.profile-image {
-    width: 25vw;              /* 30% of the viewport width */
-    max-width: 350px;         /* Never gets bigger than 200px */
-    min-width: 175px;
-    height: auto;             /* Maintain aspect ratio */
-    border-radius: 1px;       /* Optional: for rounded corners */
-    object-fit: cover;
-    margin-bottom: 1.5rem;
-    margin-top: 3rem;
-}
-
-.profile-image {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    animation: glow-pulse 4s ease-in-out infinite;
-    border-radius: 8px; /* make sure it matches your existing rounding */
-}
-
-@keyframes glow-pulse {
-    0%, 100% {
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    }
-    50% {
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-    }
-}
-
-header {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    /* background: rgb(0, 0, 0); optional */
-}
-
-.social-icons a {
-    color: #ffffff;
-    margin-left: 1rem;
-    font-size: 1.2rem;
-    transition: color 0.2s;
-}
-
-.social-icons a:hover {
-    color: #a0a0a0;
-}
-
-.dropdown-toggle {
-    background: none;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.025em;
-    cursor: pointer;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    /* max-width: 2000px; */
-    margin: 0 auto;
-    padding: 2rem 0rem 2rem 0rem;
-    border-top: 1px solid #ffffff;
-    position: relative;
-}
-
-.dropdown-toggle:not(:first-of-type) {
-    border-top: 1px solid #ffffff;
-}
-
-.dropdown-toggle.active .arrow {
-    transform: rotate(180deg);
-}
-
-.dropdown-content {
-    width: 100%;
-    /* max-width: 2000px; */
-    text-align: left;
-    font-size: 0.95rem;
-    color: #ffffff;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s ease;
-    /* border-bottom: 1px solid #ffffff; */
-}
-
-.dropdown-content:last-of-type {
-    border-bottom: 1px solid #ffffff;
-}
-
-.dropdown-content.open {
-    max-height: 900px; /* Enough to show paragraph */
-    margin-top: 0.5rem;
-}
-
-.bottom-divider {
-    height: 2px;
-    background-color: #ffffff;
-    margin-top: 1rem;
-}
-
-.link-text {
-    flex: 1;
-    text-align: left;
-    margin-left: 1rem;
-}
-
-.arrow {
-    transition: transform 0.3s ease;
-}
-
-.cta-wrapper {
-    width: 100%;
-    max-width: 1400px; /* or 1500/1600px if you want it wider */
-    margin: 0 auto;
-    padding: 3rem 5rem 5rem 5rem;    /* Optional: adds breathing room on small screens */
-}
-
-.timeline {
-    position: relative;
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.timeline-item {
-    position: relative;
-    padding-left: 1rem;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: -0.75rem;
-    top: 0.3rem;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    z-index: 2;
-}
-
-/* Dotted line connecting the dots */
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -0.5rem;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    border-left: 2px dotted white;
-    z-index: 1;
-}
-
-/* Remove line for last item */
-.timeline-item:last-child::before {
-    display: none;
-}
-
-.timeline-date {
-    font-weight: bold;
-    font-size: 0.95rem;
-    margin-bottom: 0.3rem;
-    color: #ffffff;
-}
-
-.timeline-content {
-    font-size: 0.9rem;
-    color: #ddd;
-    line-height: 1.4;
-}
-
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-    justify-content: center;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Wrap each video+caption pair in a container */
-.video-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Keep video-wrapper as is */
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 9 / 16;
-    overflow: hidden;
-    border-radius: 8px;
-    background: #000;
-    cursor: pointer;
-}
-
-.video-wrapper video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.video-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    transition: background 0.3s ease;
-    pointer-events: none;
-    border-radius: 8px;
-}
-
-.video-wrapper.playing .video-overlay {
-    background: transparent;
-    pointer-events: none;
-}
-
-.video-caption {
-    text-transform: uppercase;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    color: #ffffff;
-    text-align: center;
-    font-weight: 700;
-    user-select: none;
-}
-
 .highlight {
-    color: #ffe88a;
-    font-weight: 600;
+  color: #ffe88a;
+  font-weight: 600;
 }
 
-/* Responsive mobile styles */
-@media (max-width: 768px) {
-  /* Make the main container stack vertically and add padding */
-  main {
-    padding: 1.5rem 1rem 3rem 1rem;
-    min-height: auto;
-    flex-direction: column;
-  }
-
-  /* Reduce header padding and make it more compact */
-  header {
-    padding: 1rem;
-    flex-wrap: wrap;
-  }
-
-  /* Profile image smaller on mobile */
-  .profile-image {
-    width: 60vw;  /* smaller relative width */
-    max-width: none; /* allow it to shrink */
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Text size adjustments */
-  .intro h1 {
-    font-size: clamp(1.5rem, 8vw, 3rem);
-  }
-  .subtitle {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Reduce padding and margin for buttons */
-  .cta-buttons a {
-    padding: 0.5rem 1rem;
-    margin: 0.25rem 0.25rem 0.5rem 0.25rem;
-    font-size: 0.9rem;
-  }
-
-  /* Navigation */
-  #main-nav ul {
-    padding: 0.5rem;
-  }
-  #main-nav li + li {
-    margin-top: 0.25rem;
-  }
-
-  /* Timeline */
-  .timeline {
-    padding-left: 0.75rem;
-    gap: 1rem;
-  }
-  .timeline-item {
-    padding-left: 0.5rem;
-  }
-  .timeline-date {
-    font-size: 0.85rem;
-  }
-  .timeline-content {
-    font-size: 0.85rem;
-  }
-
-  /* Video grid adjustments */
-  .video-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 0.75rem;
-    margin-top: 1rem;
-  }
-  .video-caption {
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-  }
-
-  /* Dropdown toggles & content */
+/* Responsive */
+@media (max-width: 600px) {
   .dropdown-toggle {
-    padding: 1rem 0;
     font-size: 0.9rem;
+    padding: 1.5rem 0;
   }
+
+  .video-caption {
+    font-size: 0.85rem;
+  }
+
+  .profile-image {
+    width: 70vw;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .cta-wrapper {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .site-name {
+    font-size: 1.2rem;
+  }
+
   .dropdown-content {
     font-size: 0.85rem;
   }
-
-  /* Footer padding */
-  footer {
-    padding: 1.5rem 1rem;
-  }
 }
+✅ HTML Changes?
+You do not need to change anything in your HTML. Your HTML already uses good structure, semantic tags, and mobile-friendly elements (viewport, meta, flexible layout, etc.). The CSS update handles all the responsiveness.
 
-/* Prevent horizontal scroll */
-body, html {
-  overflow-x: hidden;
-}
+✅ W
