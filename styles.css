@@ -79,6 +79,12 @@ main {
 }
 .intro {
   padding: 0 1rem;
+  margin-top: 6rem;
+}
+@media (max-width: 600px) {
+  .intro {
+    margin-top: 7.5rem;
+  }
 }
 .intro h1 {
   font-size: clamp(2rem, 8vw, 4rem);
