@@ -64,12 +64,18 @@ header {
 
 /* Hero */
 main {
-  padding-top: 5rem;
+  padding-top: 6rem;
   min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding-top: 8rem; /* increase on small screens */
+  }
 }
 .intro {
   padding: 0 1rem;
@@ -311,10 +317,5 @@ footer {
 
   .dropdown-content {
     font-size: 0.85rem;
-  }
-}
-@media (max-width: 600px) {
-  .profile-image {
-    margin-top: 10rem; /* push it down from the top */
   }
 }
