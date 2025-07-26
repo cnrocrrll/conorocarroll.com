@@ -324,3 +324,18 @@ footer {
     color: #ffe88a;
     font-weight: 600;
   }
+
+/* Fix layout issues on small screens */
+@media (max-width: 768px) {
+  .cta-wrapper {
+    padding: 2rem 1rem 3rem 1rem; /* Reduce side padding */
+  }
+
+  .dropdown-toggle {
+    padding: 1.5rem 0;
+  }
+
+  .dropdown-content {
+    padding: 0 0.5rem;
+  }
+}
