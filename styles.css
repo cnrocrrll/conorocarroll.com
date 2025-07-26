@@ -315,6 +315,6 @@ footer {
 }
 @media (max-width: 600px) {
   .profile-image {
-    margin-top: 4rem; /* push it down from the top */
+    margin-top: 10rem; /* push it down from the top */
   }
 }
