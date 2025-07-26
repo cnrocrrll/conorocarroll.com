@@ -6,7 +6,10 @@ body {
     background: #000000;
     background: linear-gradient(45deg, #020441, #000000, #020441, #000000);
     background-size: 400% 400%;
-    animation: bgMove 10s ease infinite;}
+    animation: bgMove 10s ease infinite;
+    overflow-x:hidden;
+    max-width:100vw;
+}
 a { text-decoration: none; color: inherit; }
 
 @keyframes bgMove {
@@ -169,6 +172,8 @@ footer {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s ease;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
     /* border-bottom: 1px solid #ffffff; */
   }
 
@@ -201,7 +206,8 @@ footer {
     width: 100%;
     max-width: 1400px; /* or 1500/1600px if you want it wider */
     margin: 0 auto;
-    padding: 3rem 5rem 5rem 5rem;    /* Optional: adds breathing room on small screens */
+    padding: 3rem 2rem 5rem 2rem;    /* Optional: adds breathing room on small screens */
+    box-sizing: bordor-box;
   }
 
   .timeline {
@@ -265,9 +271,13 @@ footer {
     gap: 1rem;
     margin-top: 1rem;
     justify-content: center;
-    max-width: 900px;
+/*     max-width: 900px; */
     margin-left: auto;
     margin-right: auto;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
   }
   
   /* Wrap each video+caption pair in a container */
@@ -286,13 +296,17 @@ footer {
     border-radius: 8px;
     background: #000;
     cursor: pointer;
+      max-width: 100%;
+  height: auto;
   }
   
   .video-wrapper video {
     width: 100%;
-    height: 100%;
+/*     height: 100%; */
     object-fit: cover;
     display: block;
+      max-width: 100%;
+  height: auto;
   }
   
   .video-overlay {
