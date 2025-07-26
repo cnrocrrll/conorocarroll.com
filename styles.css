@@ -6,8 +6,7 @@ body {
     background: #000000;
     background: linear-gradient(45deg, #020441, #000000, #020441, #000000);
     background-size: 400% 400%;
-    animation: bgMove 10s ease infinite;
-}
+    animation: bgMove 10s ease infinite;}
 a { text-decoration: none; color: inherit; }
 
 @keyframes bgMove {
@@ -16,13 +15,13 @@ a { text-decoration: none; color: inherit; }
     100% { background-position: 0% 50%; }
   }
 
-.dropdown-toggle {
+  .dropdown-toggle {
     transition: letter-spacing 0.3s ease, color 0.3s ease;
-}
-.dropdown-toggle:hover {
+  }
+  .dropdown-toggle:hover {
     letter-spacing: 0.05em;
     color: #ffffff;
-}
+  }
 
 /* Header & nav */
 
@@ -69,7 +68,9 @@ footer {
   text-align: center;
 }
 
-.site-name {
+
+  
+  .site-name {
     font-size: 1.5rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -77,9 +78,9 @@ footer {
     color: #ffffff;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-}
+  }
 
-.profile-image {
+  .profile-image {
     width: 25vw;              /* 30% of the viewport width */
     max-width: 350px;         /* Never gets bigger than 200px */
     min-width: 175px;
@@ -88,24 +89,25 @@ footer {
     object-fit: cover;
     margin-bottom: 1.5rem;
     margin-top: 3rem;
-}
+  }
 
-.profile-image {
+  .profile-image {
+   
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     animation: glow-pulse 4s ease-in-out infinite;
     border-radius: 8px; /* make sure it matches your existing rounding */
-}
-
-@keyframes glow-pulse {
+  }
+  
+  @keyframes glow-pulse {
     0%, 100% {
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
     50% {
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
     }
-}
+  }
 
-header {
+  header {
     position: fixed;
     top: 0; left: 0;
     width: 100%;
@@ -115,20 +117,22 @@ header {
     align-items: center;
     z-index: 1000;
     /* background: rgb(0, 0, 0); optional */
-}
-
-.social-icons a {
+  }
+  
+  
+  
+  .social-icons a {
     color: #ffffff;
     margin-left: 1rem;
     font-size: 1.2rem;
     transition: color 0.2s;
-}
-
-.social-icons a:hover {
+  }
+  
+  .social-icons a:hover {
     color: #a0a0a0;
-}
+  }
 
-.dropdown-toggle {
+  .dropdown-toggle {
     background: none;
     border: none;
     font-size: 1rem;
@@ -146,17 +150,17 @@ header {
     padding: 2rem 0rem 2rem 0rem;
     border-top: 1px solid #ffffff;
     position: relative;
-}
+  }
 
-.dropdown-toggle:not(:first-of-type) {
+  .dropdown-toggle:not(:first-of-type) {
     border-top: 1px solid #ffffff;
-}
-
-.dropdown-toggle.active .arrow {
+  }
+  
+  .dropdown-toggle.active .arrow {
     transform: rotate(180deg);
-}
-
-.dropdown-content {
+  }
+  
+  .dropdown-content {
     width: 100%;
     /* max-width: 2000px; */
     text-align: left;
@@ -166,55 +170,55 @@ header {
     max-height: 0;
     transition: max-height 0.4s ease;
     /* border-bottom: 1px solid #ffffff; */
-}
+  }
 
-.dropdown-content:last-of-type {
+  .dropdown-content:last-of-type {
     border-bottom: 1px solid #ffffff;
-}
-
-.dropdown-content.open {
+  }
+  
+  .dropdown-content.open {
     max-height: 900px; /* Enough to show paragraph */
     margin-top: 0.5rem;
-}
+  }
 
-.bottom-divider {
+  .bottom-divider {
     height: 2px;
     background-color: #ffffff;
     margin-top: 1rem;
-}
+  }
 
-.link-text {
+  .link-text {
     flex: 1;
     text-align: left;
     margin-left: 1rem;
-}
-
-.arrow {
+  }
+  
+  .arrow {
     transition: transform 0.3s ease;
-}
+  }
 
-.cta-wrapper {
+  .cta-wrapper {
     width: 100%;
     max-width: 1400px; /* or 1500/1600px if you want it wider */
     margin: 0 auto;
     padding: 3rem 5rem 5rem 5rem;    /* Optional: adds breathing room on small screens */
-}
+  }
 
-.timeline {
+  .timeline {
     position: relative;
     margin: 1rem 0;
     padding-left: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-}
-
-.timeline-item {
+  }
+  
+  .timeline-item {
     position: relative;
     padding-left: 1rem;
-}
-
-.timeline-dot {
+  }
+  
+  .timeline-dot {
     position: absolute;
     left: -0.75rem;
     top: 0.3rem;
@@ -223,10 +227,10 @@ header {
     background: white;
     border-radius: 50%;
     z-index: 2;
-}
-
-/* Dotted line connecting the dots */
-.timeline-item::before {
+  }
+  
+  /* Dotted line connecting the dots */
+  .timeline-item::before {
     content: '';
     position: absolute;
     left: -0.5rem;
@@ -235,27 +239,27 @@ header {
     width: 2px;
     border-left: 2px dotted white;
     z-index: 1;
-}
-
-/* Remove line for last item */
-.timeline-item:last-child::before {
+  }
+  
+  /* Remove line for last item */
+  .timeline-item:last-child::before {
     display: none;
-}
-
-.timeline-date {
+  }
+  
+  .timeline-date {
     font-weight: bold;
     font-size: 0.95rem;
     margin-bottom: 0.3rem;
     color: #ffffff;
-}
-
-.timeline-content {
+  }
+  
+  .timeline-content {
     font-size: 0.9rem;
     color: #ddd;
     line-height: 1.4;
-}
+  }
 
-.video-grid {
+  .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
@@ -264,17 +268,17 @@ header {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Wrap each video+caption pair in a container */
-.video-item {
+  }
+  
+  /* Wrap each video+caption pair in a container */
+  .video-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* Keep video-wrapper as is */
-.video-wrapper {
+  }
+  
+  /* Keep video-wrapper as is */
+  .video-wrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 9 / 16;
@@ -282,30 +286,30 @@ header {
     border-radius: 8px;
     background: #000;
     cursor: pointer;
-}
-
-.video-wrapper video {
+  }
+  
+  .video-wrapper video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-.video-overlay {
+  }
+  
+  .video-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
     transition: background 0.3s ease;
     pointer-events: none;
     border-radius: 8px;
-}
-
-.video-wrapper.playing .video-overlay {
+  }
+  
+  .video-wrapper.playing .video-overlay {
     background: transparent;
     pointer-events: none;
-}
-
-.video-caption {
+  }
+  
+  .video-caption {
     text-transform: uppercase;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
@@ -314,102 +318,9 @@ header {
     text-align: center;
     font-weight: 700;
     user-select: none;
-}
+  }
 
-.highlight {
+  .highlight {
     color: #ffe88a;
     font-weight: 600;
-}
-
-/* Responsive mobile styles */
-@media (max-width: 768px) {
-  /* Make the main container stack vertically and add padding */
-  main {
-    padding: 1.5rem 1rem 3rem 1rem;
-    min-height: auto;
-    flex-direction: column;
   }
-
-  /* Reduce header padding and make it more compact */
-  header {
-    padding: 1rem;
-    flex-wrap: wrap;
-  }
-
-  /* Profile image smaller on mobile */
-  .profile-image {
-    width: 60vw;  /* smaller relative width */
-    max-width: none; /* allow it to shrink */
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Text size adjustments */
-  .intro h1 {
-    font-size: clamp(1.5rem, 8vw, 3rem);
-  }
-  .subtitle {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Reduce padding and margin for buttons */
-  .cta-buttons a {
-    padding: 0.5rem 1rem;
-    margin: 0.25rem 0.25rem 0.5rem 0.25rem;
-    font-size: 0.9rem;
-  }
-
-  /* Navigation */
-  #main-nav ul {
-    padding: 0.5rem;
-  }
-  #main-nav li + li {
-    margin-top: 0.25rem;
-  }
-
-  /* Timeline */
-  .timeline {
-    padding-left: 0.75rem;
-    gap: 1rem;
-  }
-  .timeline-item {
-    padding-left: 0.5rem;
-  }
-  .timeline-date {
-    font-size: 0.85rem;
-  }
-  .timeline-content {
-    font-size: 0.85rem;
-  }
-
-  /* Video grid adjustments */
-  .video-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 0.75rem;
-    margin-top: 1rem;
-  }
-  .video-caption {
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-  }
-
-  /* Dropdown toggles & content */
-  .dropdown-toggle {
-    padding: 1rem 0;
-    font-size: 0.9rem;
-  }
-  .dropdown-content {
-    font-size: 0.85rem;
-  }
-
-  /* Footer padding */
-  footer {
-    padding: 1.5rem 1rem;
-  }
-}
-
-/* Prevent horizontal scroll */
-body, html {
-  overflow-x: hidden;
-}
