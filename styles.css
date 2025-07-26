@@ -313,7 +313,8 @@ footer {
     font-size: 0.85rem;
   }
 }
-✅ HTML Changes?
-You do not need to change anything in your HTML. Your HTML already uses good structure, semantic tags, and mobile-friendly elements (viewport, meta, flexible layout, etc.). The CSS update handles all the responsiveness.
-
-✅ W
+@media (max-width: 600px) {
+  .profile-image {
+    margin-top: 4rem; /* push it down from the top */
+  }
+}
