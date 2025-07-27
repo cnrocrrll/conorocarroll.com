@@ -114,15 +114,16 @@ footer {
     position: fixed;
     top: 0; left: 0;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    /* background: rgb(0, 0, 0); optional */
+    background-color: transparent;
+    transition: background-color 0.4s ease-in-out;
   }
   header.scrolled {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
 }
   
   
