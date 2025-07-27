@@ -121,7 +121,9 @@ footer {
     z-index: 1000;
     /* background: rgb(0, 0, 0); optional */
   }
-  
+  header.scrolled {
+  background-color: black;
+}
   
   
   .social-icons a {
