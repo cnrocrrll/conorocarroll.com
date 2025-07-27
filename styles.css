@@ -129,6 +129,10 @@ footer {
   header {
     padding: 0.5rem 1rem 0.25rem 1rem;
   }
+    .site-name,
+  .social-icons {
+    margin: 0;
+  }
 }
   
   
