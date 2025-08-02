@@ -350,26 +350,3 @@ footer {
     color: #ffe88a;
     font-weight: 600;
   }
-
-
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.comparison-column h3 {
-  margin-bottom: 0.5rem;
-}
-
-.comparison-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-padding-left: 1.2rem;
-}
-
-.comparison-column li {
-  margin-bottom: 0.5rem;
-list-style-type: disc;
-}
