@@ -370,4 +370,5 @@ footer {
 
 .comparison-column li {
   margin-bottom: 0.5rem;
+list-style-type: disc;
 }
