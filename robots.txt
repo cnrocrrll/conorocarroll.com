@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://conorocarroll.com/sitemap.xml
