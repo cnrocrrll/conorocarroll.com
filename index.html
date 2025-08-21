@@ -193,9 +193,11 @@
   const toggle = document.getElementById('menu-toggle');
   const closeBtn = document.getElementById('menu-close');
   const nav = document.getElementById('main-nav');
-  
-  toggle.addEventListener('click', () => nav.classList.remove('hidden'));
-  closeBtn.addEventListener('click', () => nav.classList.add('hidden'));
+
+  if (toggle && closeBtn && nav) {
+   toggle.addEventListener('click', () => nav.classList.remove('hidden'));
+   closeBtn.addEventListener('click', () => nav.classList.add('hidden'));
+  }
 
   const toggles = document.querySelectorAll(".dropdown-toggle");
   const contents = document.querySelectorAll(".dropdown-content");
