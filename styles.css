@@ -40,7 +40,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: clamp(20px, 6vw, 600px);
   display: flex;
   justify-content: center;
-  gap: clamp(20px, 15vw, 700px); /* responsive gap, max 200px */
+  gap: clamp(30px, 15vw, 700px); /* responsive gap, max 200px */
 }
 
 .profile-buttons .btn {
