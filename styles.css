@@ -7,40 +7,24 @@
 
 /* Reset & base */
 * { margin:0; padding:0; box-sizing:border-box; }
-/* body {
+body {
     font-family: sans-serif;
     color: #ffffff;
     background: #000000;
-    background: linear-gradient(45deg, #020441, #000000, #020441, #000000);
+    background: linear-gradient(45deg, #4770ff, #000000, #4770ff, #000000);
     background-size: 400% 400%;
     animation: bgMove 10s ease infinite;
     overflow-x:hidden;
     max-width:100vw;
-} */
-body {
-  font-family: sans-serif;
-  color: #ffffff;
-  background: #000000;
-  animation: bgMove 8s ease infinite; /* shorter cycle, flashes blue briefly */
-  overflow-x:hidden;
-  max-width:100vw;
 }
+
 a { text-decoration: none; color: inherit; }
 
-/* @keyframes bgMove {
+@keyframes bgMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-  } */
-
-@keyframes bgMove {
-  0%, 90%, 100% {
-    background: #000000;
   }
-  40%, 50% {
-    background: linear-gradient(45deg, #4770ff, #000000, #4770ff, #000000);
-  }
-}
 
   .dropdown-toggle {
     transition: letter-spacing 0.3s ease, color 0.3s ease;
@@ -199,10 +183,10 @@ footer {
     transform: rotate(180deg);
   }
   
-/*   .dropdown-content {
+  .dropdown-content {
     width: 100%; */
     /* max-width: 2000px; */
-/*     text-align: left;
+    text-align: left;
     font-size: 0.95rem;
     color: #ffffff;
     overflow: hidden;
@@ -211,26 +195,16 @@ footer {
     box-sizing: border-box;
     overflow-wrap: break-word; */
     /* border-bottom: 1px solid #ffffff; */
-/*   } */
+  }
 
   .dropdown-content:last-of-type {
     border-bottom: 1px solid #ffffff;
   }
   
-/*   .dropdown-content.open {
+  .dropdown-content.open {
     max-height: 900px; /* Enough to show paragraph */
-/*     margin-top: 0.5rem;
-  } */ 
-
-.dropdown-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-.dropdown-content.open {
-  max-height: 2000px; /* big enough to cover any content height */
-}
+    margin-top: 0.5rem;
+  } 
 
   .bottom-divider {
     height: 2px;
