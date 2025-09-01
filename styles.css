@@ -36,15 +36,15 @@ a { text-decoration: none; color: inherit; }
 #main-nav li + li { margin-top:0.5rem; }
 
 .profile-buttons {
-  margin-top: clamp(20px, 5vw, 600px);
-  margin-bottom: clamp(20px, 5vw, 600px);
+  margin-top: clamp(20px, 7vw, 600px);
+  margin-bottom: clamp(20px, 7vw, 600px);
   display: flex;
   justify-content: center;
   gap: clamp(20px, 15vw, 600px); /* responsive gap, max 200px */
 }
 
 .profile-buttons .btn {
-  padding: clamp(8px, 1vw, 16px) clamp(14px, 2vw, 28px); /* top/bottom | left/right */
+  padding: clamp(10px, 1vw, 10px) clamp(14px, 2vw, 28px); /* top/bottom | left/right */
   border-radius: 1px;
   font-size: 0.95rem;
   font-weight: 600;
