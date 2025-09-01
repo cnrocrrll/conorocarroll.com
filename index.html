@@ -50,6 +50,11 @@
     <div class="intro">
       <img src="images/IMG_8200.jpg" class="profile-image" alt="Conor O'Carroll">
       <p class="subtitle">Content Architect | Video Editor.</p>
+
+      <div class="profile-buttons">
+        <a href="https://t.me/conorocarroll" target="_blank" class="btn btn-filled">Telegram</a>
+        <a target="_blank" class="btn btn-filled" id="tam-btn">The Architect Method</a>
+      </div>
   
       <!-- optional CTA buttons -->
       <div class="cta-wrapper">
@@ -255,6 +260,13 @@
     } else {
       header.classList.remove('scrolled');
     }
+  });
+
+  const tamBtn = document.getElementById('tam-btn');
+
+  tamBtn.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    alert('Locked'); // Show the message
   });
 </script>
 </html>
