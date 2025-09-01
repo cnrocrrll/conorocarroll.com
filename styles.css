@@ -36,7 +36,7 @@ a { text-decoration: none; color: inherit; }
 #main-nav li + li { margin-top:0.5rem; }
 
 .profile-buttons {
-  margin-top: 7rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
   gap: 10rem;
@@ -51,12 +51,11 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.25s ease;
 }
 
-.profile-buttons .btn-outline:hover { background: #fff; color: #000; }
+.profile-buttons .btn-filled:hover { background: #fff; color: #000; }
 /* Filled button */
 .profile-buttons .btn-filled {
   background: #ffffff;
   color: #000;
-  border: 2px solid #ff0000;
 }
 
 /* Hero section */
