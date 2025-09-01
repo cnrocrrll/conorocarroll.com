@@ -11,6 +11,25 @@ body {
 }
 a { text-decoration: none; color: inherit; }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQoU2NkYGD4z0ABYBwFo2AUjIJRgDgLhRAkAABypgQBpiTqvwAAAABJRU5ErkJggg==");
+  background-repeat: repeat;
+  opacity: 0.12; /* adjust intensity */
+  pointer-events: none;
+  z-index: 1;
+}
+
+body > * {
+  position: relative;
+  z-index: 2;
+}
+
 @keyframes bgMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
