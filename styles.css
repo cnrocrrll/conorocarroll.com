@@ -4,7 +4,7 @@ body {
   font-family: sans-serif;
   color: #ffffff;
   background: #000000;
-  background: linear-gradient(45deg, #000000, #000000, #000000, #091ca1);
+  background: linear-gradient(45deg, #091ca1, #000000, #000000, #091ca1);
   background-size: 400% 400%;
   animation: bgMove 10s ease infinite;
   overflow-x:hidden; max-width:100vw;
@@ -56,6 +56,13 @@ a { text-decoration: none; color: inherit; }
 .profile-buttons .btn-filled {
   background: #ffffff;
   color: #000;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .profile-buttons {
+    gap: 2rem; /* Reduce gap on mobile/tablet */
+  }
 }
 
 /* Hero section */
