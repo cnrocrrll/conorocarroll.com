@@ -35,7 +35,29 @@ a { text-decoration: none; color: inherit; }
 }
 #main-nav li + li { margin-top:0.5rem; }
 
-.profile-buttons { margin-top: 1rem; display: flex; justify-content: center; gap: 1rem; } .profile-buttons .btn { padding: 0.6rem 1.4rem; border-radius: 6px; font-size: 0.95rem; font-weight: 600; text-transform: uppercase; text-decoration: none; transition: all 0.25s ease; } /* Outline button */ .profile-buttons .btn-outline { border: 2px solid #fff; color: #fff; background: transparent; } .profile-buttons .btn-outline:hover { background: #fff; color: #000; } /* Filled button */ .profile-buttons .btn-filled { background: #ffffff; color: #000; border: 2px solid #ffe88a; }
+.profile-buttons {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+.profile-buttons .btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 1px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.profile-buttons .btn-outline:hover { background: #fff; color: #000; }
+/* Filled button */
+.profile-buttons .btn-filled {
+  background: #ffffff;
+  color: #000;
+  border: 2px solid #ff0000;
+}
 
 /* Hero section */
 main {
