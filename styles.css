@@ -36,11 +36,11 @@ a { text-decoration: none; color: inherit; }
 #main-nav li + li { margin-top:0.5rem; }
 
 .profile-buttons {
-  margin-top: clamp(20px, 7vw, 600px);
-  margin-bottom: clamp(20px, 7vw, 600px);
+  margin-top: clamp(20px, 8vw, 600px);
+  margin-bottom: clamp(20px, 8vw, 600px);
   display: flex;
   justify-content: center;
-  gap: clamp(20px, 15vw, 600px); /* responsive gap, max 200px */
+  gap: clamp(20px, 8vw, 600px); /* responsive gap, max 200px */
 }
 
 .profile-buttons .btn {
