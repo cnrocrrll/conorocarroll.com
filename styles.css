@@ -63,7 +63,7 @@ a { text-decoration: none; color: inherit; }
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .profile-buttons {
-    gap: 2rem; /* Reduce gap on mobile/tablet */
+    gap: 3rem; /* Reduce gap on mobile/tablet */
   }
 }
 
