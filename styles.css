@@ -36,15 +36,15 @@ a { text-decoration: none; color: inherit; }
 #main-nav li + li { margin-top:0.5rem; }
 
 .profile-buttons {
-/*   margin-top: 5rem; */
   margin-top: 10vw;
   margin-bottom: 10vw;
   display: flex;
   justify-content: center;
-  gap: 20vw;
+  gap: clamp(20px, 5vw, 200px); /* responsive gap, max 200px */
 }
+
 .profile-buttons .btn {
-  padding: 0.6rem 1.4rem;
+  padding: clamp(8px, 1vw, 16px) clamp(14px, 2vw, 28px); /* top/bottom | left/right */
   border-radius: 1px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -53,22 +53,11 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.25s ease;
 }
 
-.profile-image {
-    width: 25vw;              /* 30% of the viewport width */
-    max-width: 350px;         /* Never gets bigger than 200px */
-    min-width: 175px;
-    height: auto;             /* Maintain aspect ratio */
-    border-radius: 1px;       /* Optional: for rounded corners */
-    object-fit: cover;
-    margin-bottom: 1.5rem;
-    margin-top: 3rem;
-  }
-
-.profile-buttons .btn-filled:hover { background: #fff; color: #000; }
+.profile-buttons .btn-filled:hover { background: #111; color: #000; }
 /* Filled button */
 .profile-buttons .btn-filled {
-  background: #111;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 
 /* Media query for smaller screens */
