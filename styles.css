@@ -178,7 +178,7 @@ footer {
     color: #a0a0a0;
   }
 
-  .dropdown-toggle {
+/*   .dropdown-toggle {
     background: none;
     border: none;
     font-size: 1rem;
@@ -192,7 +192,7 @@ footer {
     align-items: center;
     width: 100%;
     /* max-width: 2000px; */
-    margin: 0 auto;
+/*     margin: 0 auto;
     padding: 2rem 0rem 2rem 0rem;
     border-top: 1px solid #ffffff;
     position: relative;
@@ -209,16 +209,16 @@ footer {
   .dropdown-content {
     width: 100%;
     /* max-width: 2000px; */
-    text-align: left;
+/*     text-align: left;
     font-size: 0.95rem;
     color: #ffffff;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s ease;
     box-sizing: border-box;
-    overflow-wrap: break-word;
+    overflow-wrap: break-word; */
     /* border-bottom: 1px solid #ffffff; */
-  }
+/*   }
 
   .dropdown-content:last-of-type {
     border-bottom: 1px solid #ffffff;
@@ -226,8 +226,72 @@ footer {
   
   .dropdown-content.open {
     max-height: 900px; /* Enough to show paragraph */
-    margin-top: 0.5rem;
-  } 
+/*     margin-top: 0.5rem;
+  }  */
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0rem 2rem 0rem;
+  border-top: 1px solid #ffffff;
+  position: relative;
+}
+
+.dropdown-toggle:not(:first-of-type) {
+  border-top: 1px solid #ffffff;
+}
+
+.dropdown-toggle.active .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  width: 100%;
+  max-width: 1200px;       /* Default max width for large monitors */
+  margin: 0 auto;          /* Center horizontally */
+  text-align: left;
+  font-size: 0.95rem;
+  color: #ffffff;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.dropdown-content:last-of-type {
+  border-bottom: 1px solid #ffffff;
+}
+
+.dropdown-content.open {
+  max-height: 900px; /* Enough to show paragraph */
+  margin-top: 0.5rem;
+}
+
+/* Laptop screens (slightly narrower) */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  .dropdown-content {
+    max-width: 900px;
+  }
+}
+
+/* Small devices (phones/tablets) */
+@media (max-width: 768px) {
+  .dropdown-content {
+    max-width: 100%; /* Full width on mobile */
+  }
+}
 
   .bottom-divider {
     height: 2px;
