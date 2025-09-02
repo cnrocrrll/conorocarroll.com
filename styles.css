@@ -291,6 +291,10 @@ footer {
   .dropdown-content {
     max-width: 100%; /* Full width on mobile */
   }
+
+  .dropdown-content.open {
+    max-height: none; /* Remove height cap on mobile */
+  }
 }
 
   .bottom-divider {
