@@ -275,7 +275,7 @@ footer {
 }
 
 .dropdown-content.open {
-  max-height: 900px; /* Enough to show paragraph */
+  max-height: 2000px; /* Enough to show paragraph */
   margin-top: 0.5rem;
 }
 
