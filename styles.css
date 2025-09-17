@@ -471,6 +471,13 @@ footer {
     transition: transform 0.3s ease;
   }
 
+  /* Mobile fix: stack thumbnails on small screens */
+  @media (max-width: 480px) {
+    .thumbnail-grid {
+      grid-template-columns: 1fr; /* Force single column on small screens */
+    }
+  }
+
   .highlight {
     color: #ffe88a;
     font-weight: 600;
