@@ -451,7 +451,7 @@ footer {
   text-transform: uppercase;
   margin: 2rem 0 1rem;
   text-align: center;
-  color: #ffe88a; /* matches your highlight */
+  color: #ffffff;
   }
   
   .thumbnail-grid {
@@ -464,7 +464,8 @@ footer {
   .thumbnail-grid img {
     width: 100%;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain; /* keep transparency intact */
+    background: transparent; /* force transparency */
     box-shadow: 0 0 8px rgba(0,0,0,0.5);
     transition: transform 0.3s ease;
   }
