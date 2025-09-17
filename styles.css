@@ -445,6 +445,34 @@ footer {
     user-select: none;
   }
 
+  .section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 2rem 0 1rem;
+  text-align: center;
+  color: #ffe88a; /* matches your highlight */
+  }
+  
+  .thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .thumbnail-grid img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .thumbnail-grid img:hover {
+    transform: scale(1.05);
+  }
+
   .highlight {
     color: #ffe88a;
     font-weight: 600;
