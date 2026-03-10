@@ -125,14 +125,14 @@ footer {
     margin-top: 3rem;
   }
 
-  .profile-image {
+  /* .profile-image {
    
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    /* animation: glow-pulse 4s ease-in-out infinite; */
-    border-radius: 8px; /* make sure it matches your existing rounding */
+    animation: glow-pulse 4s ease-in-out infinite;
+    border-radius: 8px;
   }
   
-  /* @keyframes glow-pulse {
+  @keyframes glow-pulse {
     0%, 100% {
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
