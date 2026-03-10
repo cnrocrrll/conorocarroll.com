@@ -128,18 +128,18 @@ footer {
   .profile-image {
    
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    animation: glow-pulse 4s ease-in-out infinite;
+    /* animation: glow-pulse 4s ease-in-out infinite; */
     border-radius: 8px; /* make sure it matches your existing rounding */
   }
   
-  @keyframes glow-pulse {
+  /* @keyframes glow-pulse {
     0%, 100% {
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
     50% {
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
     }
-  }
+  } */
 
   header {
     position: fixed;
