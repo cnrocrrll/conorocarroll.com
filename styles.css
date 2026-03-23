@@ -11,6 +11,17 @@ body {
 }
 a { text-decoration: none; color: inherit; }
 
+.cursor {
+  display: inline-block;
+  font-weight: 300;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 @keyframes bgMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
