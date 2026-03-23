@@ -22,13 +22,36 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="images/Favicon.png" alt="Conor O'Carroll">
-
   <link rel="canonical" href="https://conorocarroll.com/">
+ 
+  <style>
+    .cursor {
+      display: inline-block;
+      font-weight: 300;
+      animation: blink 0.7s step-end infinite;
+    }
+ 
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+ 
+    .hidden-until-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+ 
+    .hidden-until-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-
+ 
   
 <body>
-  <header>
+  <header class="hidden-until-reveal">
       <div class="site-name">CONOR O'CARROLL</div>
       <div class="social-icons">
 <!--         <a href="https://www.youtube.com/@conorocarroll" target="_blank" aria-label="YouTube">
@@ -45,19 +68,19 @@
         </a>
     </div>
   </header>
-
+ 
   <main id="home">
     <div class="intro">
-      <img src="images/IMG_8200.jpg" class="profile-image" alt="Conor O'Carroll">
-      <p class="subtitle">Content Architect | Video Editor.</p>
-
-      <div class="profile-buttons">
+      <img src="images/IMG_8200.jpg" class="profile-image hidden-until-reveal" alt="Conor O'Carroll">
+      <p class="subtitle"><span id="typewriter"></span><span class="cursor">|</span></p>
+ 
+      <div class="profile-buttons hidden-until-reveal">
         <a href="https://t.me/conorocarroll" target="_blank" class="btn btn-filled">Telegram</a>
         <a href="https://t.me/conorocarroll" target="_blank" class="btn btn-filled" id="tam-btn">Study T.A.M.</a>
       </div>
   
       <!-- optional CTA buttons -->
-      <div class="cta-wrapper">
+      <div class="cta-wrapper hidden-until-reveal">
 <!--         <button class="dropdown-toggle">
           <span class="arrow">▼</span>
           <span class="link-text"><span class="highlight">FREE</span> Telegram</span>
@@ -94,7 +117,7 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date">2022</div>
-          <div class="timeline-content">Launched my first online business: a social media marketing agency called CJO Media. Gained hands-on experience using social media to align with clients’ goals and running ad campaigns.</div>
+          <div class="timeline-content">Launched my first online business: a social media marketing agency called CJO Media. Gained hands-on experience using social media to align with clients' goals and running ad campaigns.</div>
         </div>
             
         <div class="timeline-item">
@@ -106,7 +129,7 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date">2024</div>
-          <div class="timeline-content">Built faceless TikTok and Instagram pages, developing strong skills in content creation, retention-based editing, and virality. Generated tens of thousands of followers and tens of millions of views. Began helping creators as a freelance video editor and ‘clipper.’</div>
+          <div class="timeline-content">Built faceless TikTok and Instagram pages, developing strong skills in content creation, retention-based editing, and virality. Generated tens of thousands of followers and tens of millions of views. Began helping creators as a freelance video editor and 'clipper.'</div>
         </div>
     
         <div class="timeline-item">
@@ -149,7 +172,7 @@
             </div>
             <div class="video-caption">Talking Head</div>
           </div>
-
+ 
           <div class="video-item">
             <div class="video-wrapper">
               <video playsinline preload="metadata" controls controlsList="nofullscreen">
@@ -180,7 +203,7 @@
             <div class="video-caption">Street Style</div>
           </div>
         </div>
-
+ 
         <!-- Title for thumbnails section -->
         <h3 class="section-title">Thumbnails</h3>
       
@@ -222,8 +245,8 @@
     </div>
   </div>
   </main>
-
-  <footer>
+ 
+  <footer class="hidden-until-reveal">
     <div class="social-icons">
 <!--       <a href="https://www.youtube.com/@conorocarroll" target="_blank" aria-label="YouTube">
         <i class="fab fa-youtube"></i>
@@ -245,55 +268,97 @@
   const toggle = document.getElementById('menu-toggle');
   const closeBtn = document.getElementById('menu-close');
   const nav = document.getElementById('main-nav');
-
+ 
   if (toggle && closeBtn && nav) {
-   toggle.addEventListener('click', () => nav.classList.remove('hidden'));
-   closeBtn.addEventListener('click', () => nav.classList.add('hidden'));
+    toggle.addEventListener('click', () => nav.classList.remove('hidden'));
+    closeBtn.addEventListener('click', () => nav.classList.add('hidden'));
   }
-
+ 
   const toggles = document.querySelectorAll(".dropdown-toggle");
   const contents = document.querySelectorAll(".dropdown-content");
   toggles.forEach((toggle, index) => {
     toggle.addEventListener("click", () => {
       const content = contents[index];
       const isOpen = content.classList.contains("open");
-      // Close all others
       contents.forEach(c => c.classList.remove("open"));
       toggles.forEach(t => t.classList.remove("active"));
-      // Open the clicked one
       if (!isOpen) {
         content.classList.add("open");
         toggle.classList.add("active");
       }
     });
   });
-
+ 
   document.querySelectorAll('.video-wrapper video').forEach(video => {
-    video.addEventListener('play', () => {
-      video.parentElement.classList.add('playing');
-    });
-    video.addEventListener('pause', () => {
-      video.parentElement.classList.remove('playing');
-    });
-    video.addEventListener('ended', () => {
-      video.parentElement.classList.remove('playing');
-    });
+    video.addEventListener('play', () => video.parentElement.classList.add('playing'));
+    video.addEventListener('pause', () => video.parentElement.classList.remove('playing'));
+    video.addEventListener('ended', () => video.parentElement.classList.remove('playing'));
   });
-
+ 
   window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+    header.classList.toggle('scrolled', window.scrollY > 50);
   });
-
+ 
   const tamBtn = document.getElementById('tam-btn');
-
   tamBtn.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default link behavior
-    alert('Locked. You do not have access.'); // Show the message
+    event.preventDefault();
+    alert('Locked. You do not have access.');
   });
+ 
+  // --- Typewriter effect ---
+  const phrases = ["Content Architect.", "Video Editor."];
+  const el = document.getElementById("typewriter");
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let loopCount = 0;
+  let hasRevealed = false;
+ 
+  const typeSpeed = 80;
+  const deleteSpeed = 45;
+  const pauseAfterType = 1800;
+  const pauseAfterDelete = 400;
+ 
+  function revealPage() {
+    if (hasRevealed) return;
+    hasRevealed = true;
+    document.querySelectorAll('.hidden-until-reveal').forEach((el, i) => {
+      setTimeout(() => el.classList.add('revealed'), i * 120);
+    });
+  }
+ 
+  function type() {
+    const current = phrases[phraseIndex];
+ 
+    if (!isDeleting) {
+      el.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === current.length) {
+        isDeleting = true;
+        if (!hasRevealed && phraseIndex === 0 && loopCount === 0) {
+          revealPage();
+        }
+        setTimeout(type, pauseAfterType);
+        return;
+      }
+    } else {
+      el.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        if (phraseIndex === 0) {
+          loopCount++;
+        }
+        setTimeout(type, pauseAfterDelete);
+        return;
+      }
+    }
+ 
+    setTimeout(type, isDeleting ? deleteSpeed : typeSpeed);
+  }
+ 
+  type();
 </script>
 </html>
