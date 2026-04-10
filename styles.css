@@ -389,17 +389,21 @@ footer {
 
   .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-top: 1rem;
-    justify-content: center;
-/*     max-width: 900px; */
     margin-left: auto;
     margin-right: auto;
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-      box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    .video-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   
   /* Wrap each video+caption pair in a container */
@@ -483,9 +487,9 @@ footer {
   }
 
   /* Mobile fix: stack thumbnails on small screens */
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     .thumbnail-grid {
-      grid-template-columns: 1fr; /* Force single column on small screens */
+      grid-template-columns: 1fr;
     }
   }
 
